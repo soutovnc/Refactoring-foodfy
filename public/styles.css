@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+}
+
+header {
+    margin: 32px 0;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    align-items: center;
+}
+
+.menu a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #111111;
+    margin-right: 30px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+}
+
+.hero .intro {
+    width: 320px;
+    align-self: center;
+    padding-left: 60px;
+}
+
+.hero .intro h1 {
+    width: 305px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+.hero .intro p {
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    line-height: 28px;
+}
+
+.hero img {
+    justify-self: center;
+    padding-top: 66px;
+}
+
+main {
+    margin: 50px 0;
+    max-width: 940px;
+}
+
+main h2 {
+    font-size: 24px;
+    color: #111111;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    font-size: 20px;
+    line-height: 24px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    color: #444444; 
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+
+main .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 20px;
+}
+
+main .content img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+main .content h4 {
+    font-size: 18px;
+    line-height: 21px;
+    color: #111111;
+    margin-bottom: 5px;
+}
+
+main .content p {
+    font-size: 14px;
+    line-height: 16px;
+    color:#777
+}
+
+
+footer {
+    padding: 23px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background: #EEEEEE;
+    color: #999999;
+    text-align: center;
+}
+
+/* ======= MODAL ======= */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    max-width: 660px;
+    height: 413px;
+    box-sizing: border-box;
+    margin: 25vh auto;
+    position: relative;
+    border-radius: 16px;
+}
+
+
+.modal-content img {
+    width: 91%;
+    height: 200px;
+    margin: 30px 30px 20px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-content h4 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #111111;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 5px;
+    color: #777777;
+    text-align: center;
+}
+
+.modal .close-modal a {
+    font-size: 16px;
+    color: #999999;
+    text-align: center;
+    display: block;
+    margin-top: 60px;
+}
+
+/* ======= MODAL.active ======= */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
