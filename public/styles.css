@@ -11,7 +11,7 @@ a {
 }
 body {
     background-color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
 }
 
 .wrapper {
@@ -27,7 +27,7 @@ header {
 }
 
 .menu a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #111111;
@@ -49,7 +49,7 @@ header {
 
 .hero .intro h1 {
     width: 305px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Bold', sans-serif;
     font-size: 32px;
     line-height: 38px;
     color: #111111;
@@ -123,7 +123,7 @@ main .content p {
 
 footer {
     padding: 23px 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-Regular', sans-serif;
     font-size: 14px;
     background: #EEEEEE;
     color: #999999;
@@ -191,4 +191,77 @@ footer {
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+/* ==== recipe info ==== */
+
+.recipe img {
+    border-radius: 15px;
+}
+
+.recipe h3 {
+    font-family: 'Roboto-Bold';
+    font-size: 36px;
+    line-height: 42px;
+    color: #111111;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.recipe p {
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.recipe h4 {
+    font-family: 'Roboto-Bold';
+    font-size: 24px;
+    line-height: 28px;
+    margin: 20px 0 20px;
+    color: #111111;
+    width: max-content;
+}
+
+
+/* ====== SHOW HIDE ====== */
+
+.wall {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-right: 8px;
+}
+
+.hide {
+    font-family: 'Roboto-Regular';
+    font-size: 12px;
+    line-height: 14px;
+    text-align: justify;
+    color: #999999;
+    margin-top: 35px;
+    cursor: pointer;
+    padding: 0 20px 0;
+    width: max-content;  
+}
+
+.text {
+    margin-top: 20px;
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    line-height: 28px;
+}
+
+/* ==== Active ==== */
+
+.text {
+    display: block;
+}
+
+.text.active {
+    display: none;
 }

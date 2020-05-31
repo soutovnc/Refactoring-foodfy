@@ -1,0 +1,72 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <main>
+        <div class="recipe">
+
+            {# {% for item in items %} #}
+            <div class="card" id="{{item.id}}">
+                <img src="{{item.image}}" alt="{{item.title}}">
+                <h3 class="card_title">{{item.title}}</h3>
+                <p class="card_author">{{item.author}}</p>
+            </div>
+
+            <div class="info__details">
+                <div class="title">
+                    <div class="wall">              
+                        <h4>Ingredientes</h4>
+                        <a class="hide">Esconder</a>
+                    </div>
+                    <ul class="text">
+                        {% for ingredients in item.ingredients %}
+                            <li>{{ingredients}};</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {# <div class="content__ingredients">
+                    {% for ingredients in item.ingredients %}
+                        <li>{{ingredients}};</li>
+                    {% endfor %}
+                </div> #}
+
+                <div class="title prepare">
+                    <div class="wall">
+                        <h4>Modo de preparo</h4>
+                        <div class="hide">Mostrar</div>
+                    </div>
+                    <ul class="text">
+                        {% for  preparation in item.preparation %}
+                            <li>{{preparation}}.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                    {# <div class="content__ingredients">
+                        {% for  preparation in item.preparation %}
+                            <li>{{preparation}}.</li>
+                        {% endfor %} #}
+                    </div>
+                <div class="title info">
+                    <div class="wall">
+                        <h4>Informações adicionais</h4>
+                        <div class="hide"> Mostrar</div>
+                    </div>
+                    <div class="text">
+                        {{item.information}}
+                    </div>
+                </div>
+                {# <div class="content__ingredients">
+                    {{item.information}}
+                </div> #}
+            </div>
+
+            {# {% endfor %} #}
+
+        </div>
+    </main>
+</div>
+<footer>
+    Todos direitos reservados, receitas Foodfy.
+</footer>
+<script src="scripts.js"></script>
+{% endblock %}

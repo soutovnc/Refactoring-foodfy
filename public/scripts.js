@@ -1,20 +1,24 @@
-const modalOverlay = document.querySelector('.modal-overlay')
 const cards = document.querySelectorAll('.card')
 
-for(let card of cards) {
+for (let card of cards) {
     card.addEventListener("click", function() {
-        const imgId = card.getAttribute('id');
-        const title = card.querySelector('.card_title').innerHTML;
-        const author = card.querySelector('.card_author').innerHTML;
-        
-        modalOverlay.classList.add('active')
-        modalOverlay.querySelector('img').src = `/layouts/assets/${imgId}.png`
+        const pageId = card.getAttribute("id")
+        window.location.href = `/receita?id=${pageId}`
 
-        modalOverlay.querySelector('.modal_title').innerHTML = `${title}`
-        modalOverlay.querySelector('.modal_author').innerHTML = `${author}`
     })
 }
 
-document.querySelector('.close-modal').addEventListener("click", function() {
-    modalOverlay.classList.remove('active')
+const showText = document.querySelector('.text');
+const showHide = document.querySelector('.hide');
+
+showHide.addEventListener('click', function() {
+    if (showHide.innerHTML == 'Esconder') {
+        showText.classList.add('active')
+        showHide.innerHTML = 'Mostrar'
+    } else {
+        showText.classList.remove('active')
+        showHide.innerHTML = 'Esconder'
+    }
 })
+
+
