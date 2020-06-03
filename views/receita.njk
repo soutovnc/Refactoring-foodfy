@@ -24,16 +24,10 @@
                         {% endfor %}
                     </ul>
                 </div>
-                {# <div class="content__ingredients">
-                    {% for ingredients in item.ingredients %}
-                        <li>{{ingredients}};</li>
-                    {% endfor %}
-                </div> #}
-
                 <div class="title prepare">
                     <div class="wall">
                         <h4>Modo de preparo</h4>
-                        <div class="hide">Mostrar</div>
+                        <a class="hide">Mostrar</a>
                     </div>
                     <ul class="text">
                         {% for  preparation in item.preparation %}
@@ -41,32 +35,21 @@
                         {% endfor %}
                     </ul>
                 </div>
-                    {# <div class="content__ingredients">
-                        {% for  preparation in item.preparation %}
-                            <li>{{preparation}}.</li>
-                        {% endfor %} #}
-                    </div>
                 <div class="title info">
                     <div class="wall">
                         <h4>Informações adicionais</h4>
-                        <div class="hide"> Mostrar</div>
+                        <a class="hide">Esconder</a>
                     </div>
                     <div class="text">
                         {{item.information}}
                     </div>
                 </div>
-                {# <div class="content__ingredients">
-                    {{item.information}}
-                </div> #}
             </div>
-
-            {# {% endfor %} #}
-
         </div>
     </main>
 </div>
 <footer>
     Todos direitos reservados, receitas Foodfy.
 </footer>
-<script src="scripts.js"></script>
+<script src="/scripts.js"></script>
 {% endblock %}

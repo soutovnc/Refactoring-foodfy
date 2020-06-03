@@ -8,17 +8,18 @@ for (let card of cards) {
     })
 }
 
-const showText = document.querySelector('.text');
-const showHide = document.querySelector('.hide');
+const showText = document.querySelector('.text')
+const showHide = document.querySelectorAll('.hide')
 
-showHide.addEventListener('click', function() {
-    if (showHide.innerHTML == 'Esconder') {
-        showText.classList.add('active')
-        showHide.innerHTML = 'Mostrar'
-    } else {
-        showText.classList.remove('active')
-        showHide.innerHTML = 'Esconder'
-    }
-})
-
-
+for(let show of showHide) {
+    show.addEventListener('click', () => {
+        if (show.innerHTML == 'Esconder') {
+            showText.classList.add('active')
+            show.innerHTML = 'Mostrar'
+        } else {
+            showText.classList.remove('active')
+            show.innerHTML = 'Esconder'
+        }
+    })
+}
+    
